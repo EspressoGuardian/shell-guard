@@ -41,6 +41,7 @@ This is a small tool I built for my own workflow and I’m sharing it in case it
 
 - **Tested on**: Linux (TUXEDO OS)
 - **Other platforms**: may work, but not regularly tested
+- **Transparency**: Source code is heavily commented to explain logic and known limitations.
 
 Please review scripts before running, and try them on non-critical data first.
 
