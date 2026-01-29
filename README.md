@@ -32,8 +32,12 @@
 ## Principles
 
 - **Fail-Fast**: Catch configuration and state drift before it enters your history.
-- **Non-Destructive**: Never deletes your work; only observes and archives.
+- **Risk-Averse**: Designed to prioritize data safety by observing and archiving state rather than modifying it.
 - **Zero Dependencies**: Pure bash. Works everywhere git does.
+
+## Disclaimer
+
+This software is provided "as is", without warranty of any kind. While designed to be non-destructive, always verify scripts before running them in your environment.
 
 ## License
 
