@@ -1,23 +1,29 @@
-# shell-guard
+# shell-guard 🛡️
 
-Git safety hooks for the paranoid.
+**Git safety hooks for the paranoid developer.**
 
-`shell-guard` is a minimal bash script that prevents you from running critical commands (like releases or major merges) if your git repository is in a "dirty" state (uncommitted changes or untracked files).
+`shell-guard` is a lightweight bash utility designed to protect your repository from accidental commits during "dirty" states. It ensures that critical operations—like releases or merges—only proceed when your working directory is clean, or after a safety snapshot has been taken.
+
+## Features
+
+- **Deterministic**: Validates your git state before you execute irreversible commands.
+- **Safety Snapshots**: Automatically archives diffs and untracked files into `.guardian/snapshots/` if you're working in a dirty repo.
+- **CI-Ready**: Returns standard exit codes for easy integration into build pipelines.
 
 ## Installation
 
-1. Copy `shell-guard.sh` to your project's `bin/` or `tools/` directory.
-2. Make it executable: `chmod +x shell-guard.sh`.
+1. Drop `shell-guard.sh` into your project's `bin/` or `scripts/` folder.
+2. Grant execution permissions: `chmod +x shell-guard.sh`.
 
 ## Usage
 
-Check if the repo is clean before a build:
+**Halt if repo is dirty:**
 
 ```bash
 ./shell-guard.sh --check || exit 1
 ```
 
-Snapshot current dirty state before an experiment:
+**Force a state snapshot:**
 
 ```bash
 ./shell-guard.sh --snapshot
@@ -25,9 +31,9 @@ Snapshot current dirty state before an experiment:
 
 ## Principles
 
-- **Fail early**: Stop operations before they pollute your history.
-- **Traceable**: Snapshot changes if you choose to proceed in a dirty state.
-- **Minimalist**: Plain bash, no dependencies.
+- **Fail-Fast**: Catch configuration and state drift before it enters your history.
+- **Non-Destructive**: Never deletes your work; only observes and archives.
+- **Zero Dependencies**: Pure bash. Works everywhere git does.
 
 ## License
 
