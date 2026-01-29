@@ -1,6 +1,6 @@
 # shell-guard 🛡️
 
-**Git safety hooks for the paranoid developer.**
+**Additional Git safety hooks.**
 
 `shell-guard` is a lightweight bash utility designed to protect your repository from accidental commits during "dirty" states. It ensures that critical operations—like releases or merges—only proceed when your working directory is clean, or after a safety snapshot has been taken.
 
