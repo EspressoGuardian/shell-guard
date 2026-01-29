@@ -1,0 +1,13 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.env
+.venv/
+
+# Local Tools config
+tools/ci/
+*.json
+
+# Archives
+.guardian/
