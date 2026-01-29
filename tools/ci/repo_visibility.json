@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "defaults": {
+    "unknown_remotes_assume_public": true,
+    "always_forbidden_paths": [
+      "secrets/**",
+      "credentials/**",
+      "obsidian/Secrets/**",
+      "*.kdbx",
+      "*.key",
+      "*.token",
+      "*.pat",
+      "*.pem",
+      "*.p12",
+      "*.pfx",
+      "*.crt",
+      "*.cer",
+      ".env",
+      "auth.json"
+    ],
+    "public_block_paths": [
+      "obsidian/**",
+      ".studio/**",
+      "debug_logs/**",
+      "qa/**"
+    ]
+  },
+  "repos": [
+    {
+      "id": "shell-guard",
+      "root": "/home/brendan/hubsays-studio/shell-guard",
+      "expected_visibility": "public",
+      "public_remotes": [
+        "https://github.com/EspressoGuardian/shell-guard*",
+        "git@github.com:EspressoGuardian/shell-guard*",
+        "https://*@github.com/EspressoGuardian/shell-guard*"
+      ],
+      "private_remotes": [],
+      "allowed_paths": [
+        "README.md",
+        "shell-guard.sh",
+        "LICENSE",
+        "CODE_OF_CONDUCT.md",
+        "CONTRIBUTING.md",
+        ".gitignore",
+        ".gitattributes",
+        ".github/**",
+        ".githooks/**",
+        "docs/**",
+        "tools/**",
+        "scripts/**",
+        "src/**",
+        "assets/**"
+      ]
+    }
+  ]
+}

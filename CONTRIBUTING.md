@@ -25,6 +25,14 @@ We build tools that solve real problems. We prefer small, focused changes over l
 - **Tests required**: If you change behavior, you must include a test.
 - **Style**: Follow the existing coding style of the repository.
 
+### Repo Guard (Required)
+
+Enable the local pre-commit guard before contributing:
+
+```bash
+git config core.hooksPath .githooks
+```
+
 ## Safety & Ethics
 
 - **Offline-first**: Do not suggest features that require telemetry or cloud connectivity.
